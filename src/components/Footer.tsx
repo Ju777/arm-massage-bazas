@@ -1,10 +1,36 @@
-import Link from 'next/link';
+import Link from "next/link";
+import Image from "next/image";
+
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-6 mt-12">
-      <div className="container mx-auto text-center space-y-2">
-        <p>© {new Date().getFullYear()} Association ARM – Tous droits réservés.</p>
-        <Link href="/contact" className="underline">Contact</Link>
+    <footer className="bg-beige text-dark py-8 mt-12 border-t border-secondary">
+      <div className="container mx-auto text-center space-y-4 px-4">
+        <Link href="/" className="inline-block">
+          <Image
+            src="/images/logo.png"
+            alt="ARM Bazas"
+            width={48}
+            height={48}
+            className="rounded-full mx-auto mb-2 border-2 border-primary"
+          />
+        </Link>
+        <p className="font-title text-lg text-primary">
+          Association ARM – Ateliers Relaxation Massage
+        </p>
+        <p className="text-sm opacity-70">
+          Bazas &nbsp;•&nbsp; Tous droits réservés © {new Date().getFullYear()}
+        </p>
+        <nav className="flex justify-center space-x-6 mt-2">
+          <Link href="/entreprises" className="hover:text-primary transition">
+            Entreprises
+          </Link>
+          <Link href="/particuliers" className="hover:text-primary transition">
+            Particuliers
+          </Link>
+          <Link href="/contact" className="hover:text-primary transition">
+            Contact
+          </Link>
+        </nav>
       </div>
     </footer>
   );
