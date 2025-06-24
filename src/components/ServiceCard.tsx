@@ -1,3 +1,5 @@
+import { Sparkles } from "lucide-react";
+
 type ServiceCardProps = {
   title: string;
   description: string;
@@ -10,10 +12,14 @@ export default function ServiceCard({
   price,
 }: Readonly<ServiceCardProps>) {
   return (
-    <div className="border p-6 rounded-lg shadow-sm hover:shadow-md transition bg-white">
-      <h3 className="text-xl font-semibold mb-2">{title}</h3>
-      <p className="text-sm mb-4 text-gray-700">{description}</p>
-      <p className="text-blue-600 font-bold">{price}</p>
+    <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-transform transform hover:-translate-y-1 relative">
+      <Sparkles
+        className="absolute top-4 right-4 text-primary opacity-50"
+        size={24}
+      />
+      <h3 className="font-title text-xl text-primary mb-2">{title}</h3>
+      <p className="text-dark mb-4 text-sm leading-relaxed">{description}</p>
+      <p className="text-primary font-semibold text-lg">{price}</p>
     </div>
   );
 }
