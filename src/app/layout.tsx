@@ -4,9 +4,15 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "A R M - Massage & Bien-être à Bazas",
+  title: "ARM Bazas",
   description:
-    "Association ARM - Ateliers Relaxation Massage pour les entreprises du Bazadais, et massages aux particuliers.",
+    "Ateliers Relaxation Massage à Bazas. Prestations de massage pour entreprises et particuliers.",
+  icons: {
+    icon: "/favicon.ico",
+  },
+  openGraph: {
+    images: ["/images/logo.png"],
+  },
 };
 
 export default function RootLayout({
