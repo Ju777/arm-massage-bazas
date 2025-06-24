@@ -1,4 +1,20 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Quicksand:wght@400;600;700&display=swap');
+
+html, body {
+  @apply bg-light text-dark;
+}
+
+h1, h2, h3, h4 {
+  @apply font-title text-primary;
+}
+
+p, span, a, li {
+  @apply font-sans text-dark;
+}
 
 :root {
   --background: #ffffff;
