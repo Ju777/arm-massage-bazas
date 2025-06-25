@@ -12,9 +12,9 @@ export default function ServiceCard({
   price,
 }: Readonly<ServiceCardProps>) {
   return (
-    <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-transform transform hover:-translate-y-1 relative">
+    <div className="bg-white p-6 rounded-xl border border-secondary hover:shadow-lg transition transform hover:-translate-y-1 relative">
       <Sparkles
-        className="absolute top-4 right-4 text-primary opacity-50"
+        className="absolute top-4 right-4 text-primary opacity-70"
         size={24}
       />
       <h3 className="font-title text-xl text-primary mb-2">{title}</h3>
