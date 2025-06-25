@@ -21,11 +21,14 @@ export default function Footer() {
           Bazas &nbsp;•&nbsp; Tous droits réservés © {new Date().getFullYear()}
         </p>
         <nav className="flex justify-center space-x-6 mt-2">
+          <Link href="/ateliers" className="hover:text-primary transition">
+            Ateliers
+          </Link>
           <Link href="/entreprises" className="hover:text-primary transition">
             Entreprises
           </Link>
-          <Link href="/particuliers" className="hover:text-primary transition">
-            Particuliers
+          <Link href="/massages" className="hover:text-primary transition">
+            Massages
           </Link>
           <Link href="/contact" className="hover:text-primary transition">
             Contact

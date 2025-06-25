@@ -31,7 +31,7 @@ export default function Header() {
         <nav className={`${open ? 'block' : 'hidden'} md:flex md:space-x-6`}>
           <Link href="/ateliers" className="block py-2 hover:text-primary transition">Ateliers</Link>
           <Link href="/entreprises" className="block py-2 hover:text-primary transition">Entreprises</Link>
-          <Link href="/particuliers" className="block py-2 hover:text-primary transition">Particuliers</Link>
+          <Link href="/massages" className="block py-2 hover:text-primary transition">Massages</Link>
           <Link href="/contact" className="block py-2 hover:text-primary transition">Contact</Link>
         </nav>
       </div>
