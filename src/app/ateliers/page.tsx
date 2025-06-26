@@ -2,9 +2,9 @@ import Image from "next/image";
 import { Sparkles } from "lucide-react";
 
 export const metadata = {
-  title: "Ateliers - A R M Bazas",
+  title: "Ateliers - ARM Bazas",
   description:
-    "Ateliers d’initiation au massage relaxant réservés aux adhérents A R M à Bazas.",
+    "Ateliers d’initiation au massage relaxant réservés aux adhérents ARM à Bazas.",
 };
 
 export default function AteliersPage() {
@@ -17,10 +17,10 @@ export default function AteliersPage() {
             Ateliers d’initiation au massage relaxant
           </h1>
           <p className="text-dark leading-relaxed">
-            L’association ARM propose aux adhérents des ateliers hebdomadaires
-            d’initiation au massage relaxant dans une ambiance conviviale.
-            Apprenez les gestes essentiels aux côtés d’un praticien qualifié
-            dans notre salle à Bazas.
+            L’association ARM propose à ses adhérents des ateliers hebdomadaires
+            d’initiation au massage relaxant dans une ambiance bienveillante et
+            conviviale. Apprenez des gestes simples aux côtés d’un praticien
+            qualifié dans notre salle à Bazas.
           </p>
         </div>
         <div className="relative flex-1 w-full h-64 rounded-xl overflow-hidden shadow-lg border border-secondary">
@@ -41,26 +41,26 @@ export default function AteliersPage() {
           </h2>
           <ul className="space-y-2 list-disc list-inside">
             <li>
-              <strong>Début :</strong> 8 septembre 2025
+              <strong>Période :</strong> année scolaire (de septembre à juillet)
             </li>
             <li>
-              <strong>Quand :</strong> Tous les mercredis de 18h30 à 20h30
+              <strong>Quand :</strong> tous les mercredis de 18h30 à 20h30
             </li>
             <li>
               <strong>Où :</strong> 10, Chemin de la Chênaie 33430 Bazas
             </li>
             <li>
-              <strong>Participants :</strong> 4 personnes max par séance
+              <strong>Participants :</strong> 4 personnes max{" "}
             </li>
             <li>
-              <strong>Cotisation annuelle :</strong> 250 € par personne
+              <strong>Adhésion annuelle :</strong> 250 € par personne
             </li>
             <li>
-              <strong>Matériel :</strong> Prévoir une serviette de grande
-              taille, tout le reste est fourni.
+              <strong>Matériel :</strong> prévoir une serviette de grande taille
+              (de plage), tout le reste est fourni.
             </li>
             <li>
-              <strong>Tenue conseillée :</strong> Tenue souple (jogging,
+              <strong>Tenue conseillée :</strong> tenue souple (jogging,
               claquettes, etc.)
             </li>
           </ul>

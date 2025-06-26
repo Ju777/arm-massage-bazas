@@ -11,7 +11,7 @@ export default function Hero({
         src="/images/hero.jpg"
         alt="Massage bien-être"
         fill
-        className="object-cover opacity-50"
+        className="object-cover opacity-100"
         priority
       />
       <div className="relative z-10 text-center bg-white/70 p-6 rounded-xl shadow-lg animate-fade-in-up max-w-md mx-auto">

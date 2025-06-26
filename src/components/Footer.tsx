@@ -8,14 +8,14 @@ export default function Footer() {
         <Link href="/" className="inline-block">
           <Image
             src="/images/logo.png"
-            alt="A R M Bazas"
+            alt="ARM Bazas"
             width={48}
             height={48}
             className="rounded-full mx-auto mb-2 border-2 border-primary"
           />
         </Link>
         <p className="font-title text-lg text-primary">
-          A R M – Ateliers Relaxation Massage
+          ARM – Ateliers Relaxation Massage
         </p>
         <p className="text-sm opacity-70">
           Tous droits réservés © {new Date().getFullYear()}
