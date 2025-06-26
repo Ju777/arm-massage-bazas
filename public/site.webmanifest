@@ -1,0 +1,24 @@
+{
+  "name": "ARM Bazas",
+  "short_name": "ARM Bazas",
+  "description": "Ateliers Relaxation Massage à Bazas. Prestations de massage pour entreprises et particuliers.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f9f5f0",
+  "theme_color": "#7c5e35",
+  "icons": [
+    {
+      "src": "/favicon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "lang": "fr-FR"
+}
