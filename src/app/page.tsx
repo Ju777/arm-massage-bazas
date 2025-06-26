@@ -17,20 +17,20 @@ export default function HomePage() {
           <strong>ateliers d&apos;initiation</strong> au massage relaxant à
           Bazas, des <strong>animations de bien-être pour les TPE/PME</strong>{" "}
           du Bazadais ainsi que des <strong>massages relaxants</strong> sur
-          mesure dans notre salle bien-être (par un masseur indépendant).
+          mesure dans notre salle bien-être, par un masseur indépendant).
         </p>
         <p className="mb-8 text-lg max-w-2xl mx-auto px-4 text-dark">
           Découvrez-nous !
         </p>
         <div className="flex flex-col md:flex-row justify-center gap-4 mt-8">
           <CTAButton href="/ateliers" variant="secondary" icon="heart">
-            Ateliers d&apos;initiation
+            Ateliers
           </CTAButton>
           <CTAButton href="/entreprises" variant="third" icon="business">
-            Bien-Être pour TPE / PME
+            TPE / PME Bazas
           </CTAButton>
           <CTAButton href="/massages" variant="primary" icon="user">
-            Massages sur rdv
+            Massages
           </CTAButton>
         </div>
       </section>
