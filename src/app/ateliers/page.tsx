@@ -1,37 +1,83 @@
+import Image from "next/image";
+import { Sparkles } from "lucide-react";
+
 export const metadata = {
-  title: "Ateliers - ARM Bazas",
+  title: "Ateliers - A R M Bazas",
   description:
-    "Ateliers d’initiation au massage relaxant réservés aux adhérents ARM à Bazas.",
+    "Ateliers d’initiation au massage relaxant réservés aux adhérents A R M à Bazas.",
 };
 
 export default function AteliersPage() {
   return (
-    <section className="py-16 bg-white">
-      <div className="container mx-auto px-6 text-center max-w-2xl">
-        <h1 className="text-3xl font-title text-primary mb-4">
-          Ateliers d’initiation au massage relaxant
-        </h1>
-        <p className="text-dark mb-6">
-          L’association ARM propose aux adhérents des ateliers d’initiation au
-          massage relaxant dans une ambiance conviviale. Apprenez les gestes
-          essentiels aux côtés d’un praticien qualifié, dans notre salle à
-          Bazas.
-        </p>
-        <ul className="text-left list-disc list-inside mb-6 text-dark space-y-2">
-          <li>Public réservé aux adhérents ARM</li>
-          <li>Séances d’1 à 2 heures dans notre salle à Bazas</li>
-          <li>Sur inscription préalable</li>
-          <li>Tarif préférentiel pour les membres</li>
-        </ul>
-        <p className="text-dark mb-8">
-          Pour plus d’informations ou pour vous inscrire, contactez-nous !
-        </p>
-        <a
-          href="/contact"
-          className="inline-block px-6 py-3 rounded-full bg-primary text-white hover:bg-primary/90 transition"
-        >
-          Nous contacter
-        </a>
+    <section className="py-16 bg-light">
+      {/* En-tête + image */}
+      <div className="container mx-auto px-6 flex flex-col md:flex-row items-center md:items-start gap-8 mb-12">
+        <div className="flex-1 text-center md:text-left space-y-4">
+          <h1 className="text-3xl font-title text-primary mb-2">
+            Ateliers d’initiation au massage relaxant
+          </h1>
+          <p className="text-dark leading-relaxed">
+            L’association ARM propose aux adhérents des ateliers hebdomadaires
+            d’initiation au massage relaxant dans une ambiance conviviale.
+            Apprenez les gestes essentiels aux côtés d’un praticien qualifié
+            dans notre salle à Bazas.
+          </p>
+        </div>
+        <div className="relative flex-1 w-full h-64 rounded-xl overflow-hidden shadow-lg border border-secondary">
+          <Image
+            src="/images/massage-noir-et-blanc-min.png"
+            alt="Ateliers de massage à Bazas"
+            fill
+            className="object-cover"
+          />
+        </div>
+      </div>
+
+      {/* Infos pratiques */}
+      <div className="container mx-auto px-6 bg-beige rounded-xl shadow p-6 grid md:grid-cols-2 gap-6 text-dark mb-12 border border-secondary">
+        <div>
+          <h2 className="text-xl font-title text-primary mb-2">
+            Infos pratiques
+          </h2>
+          <ul className="space-y-2 list-disc list-inside">
+            <li>
+              <strong>Début :</strong> 8 septembre 2025
+            </li>
+            <li>
+              <strong>Quand :</strong> Tous les mercredis de 18h30 à 20h30
+            </li>
+            <li>
+              <strong>Où :</strong> 10, Chemin de la Chênaie 33430 Bazas
+            </li>
+            <li>
+              <strong>Participants :</strong> 4 personnes max par séance
+            </li>
+            <li>
+              <strong>Cotisation annuelle :</strong> 250 € par personne
+            </li>
+            <li>
+              <strong>Matériel :</strong> Prévoir une serviette de grande
+              taille, tout le reste est fourni.
+            </li>
+            <li>
+              <strong>Tenue conseillée :</strong> Tenue souple (jogging,
+              claquettes, etc.)
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2 className="text-xl font-title text-primary mb-2">Inscription</h2>
+          <p className="mb-4 text-dark leading-relaxed">
+            Inscription possible en cours d’année en fonction des places
+            disponibles. Contactez-nous pour plus d’informations.
+          </p>
+          <a
+            href="/contact"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-white shadow hover:bg-primary/90 transition"
+          >
+            <Sparkles size={18} /> Nous contacter
+          </a>
+        </div>
       </div>
     </section>
   );
