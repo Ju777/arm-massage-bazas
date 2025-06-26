@@ -13,11 +13,11 @@ export const metadata = {
   icons: {
     icon: [
       { url: "/favicon-96x96.png", type: "image/png", sizes: "96x96" },
-      { url: "/favicon.ico", type: "image/x-icon" },
+      { url: "/favicon.ico", type: "image/ico" },
+      "/favicon.ico",
     ],
     apple: "/apple-touch-icon.png",
   },
-
   manifest: "/site.webmanifest",
   openGraph: {
     title: "ARM Bazas - Ateliers Relaxation Massage",
@@ -44,8 +44,18 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body className="flex flex-col min-h-screen bg-gray-50 text-gray-800">
+        {/* Lien skip accessible au clavier */}
+        <a
+          href="#main-content"
+          className="skip-link absolute left-[-999px] top-auto w-px h-px overflow-hidden focus:left-4 focus:top-4 focus:w-auto focus:h-auto focus:p-2 focus:bg-primary focus:text-white focus:rounded-md transition-all z-50"
+        >
+          Passer au contenu
+        </a>
+
         <Header />
-        <main className="flex-grow">{children}</main>
+        <main id="main-content" className="flex-grow">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

@@ -2,11 +2,12 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Menu, X, Sparkles } from "lucide-react";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const navRef = useRef<HTMLElement>(null);
 
   const menuItems = [
     { href: "/ateliers", mainLabel: "Ateliers", subLabel: "d’initiation" },
@@ -14,6 +15,13 @@ export default function Header() {
     { href: "/massages", mainLabel: "Massages", subLabel: "sur rdv" },
     { href: "/contact", mainLabel: "Contact", subLabel: "nos coordonnées" },
   ];
+
+  // Focus sur la nav quand le menu s'ouvre (mobile)
+  useEffect(() => {
+    if (open && navRef.current) {
+      navRef.current.focus();
+    }
+  }, [open]);
 
   return (
     <header className="bg-beige border-b border-secondary sticky top-0 z-50 transition-shadow">
@@ -35,12 +43,17 @@ export default function Header() {
           className="md:hidden p-2 rounded-full hover:bg-secondary transition transform hover:scale-110"
           onClick={() => setOpen(!open)}
           aria-label="Menu"
+          aria-expanded={open}
+          aria-controls="mobile-navigation"
         >
           {open ? <X size={24} className="text-primary" /> : <Menu size={24} className="text-primary" />}
         </button>
 
         {/* Navigation */}
         <nav
+          ref={navRef}
+          tabIndex={-1}
+          id="mobile-navigation"
           className={`${
             open ? "block" : "hidden"
           } md:flex md:items-center font-sans text-center text-primary text-lg space-x-4`}
