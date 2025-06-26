@@ -1,4 +1,6 @@
+import Image from "next/image";
 import ServiceCard from "@/components/ServiceCard";
+import { Sparkles } from "lucide-react";
 
 export const metadata = {
   title: "Entreprises - A R M Bazas",
@@ -35,21 +37,47 @@ export default function EntreprisesPage() {
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-light">
+      {/* En-tête + image */}
+      <div className="container mx-auto px-6 flex flex-col md:flex-row items-center md:items-start gap-8 mb-12">
+        <div className="flex-1 text-center md:text-left space-y-4">
+          <h1 className="text-3xl font-title text-primary mb-2">
+            Prestations bien-être pour entreprises
+          </h1>
+          <p className="text-dark leading-relaxed">
+            L’association ARM propose aux entreprises des prestations sur mesure
+            pour le bien-être de vos équipes dans le Bazadais. Offrez à vos
+            collaborateurs des moments de détente et de cohésion adaptés à vos
+            besoins.
+          </p>
+        </div>
+        <div className="relative flex-1 w-full h-64 rounded-xl overflow-hidden shadow-lg border border-secondary">
+          <Image
+            src="/images/amma.jpeg" // adapte le chemin et nom d’image
+            alt="Bien-être en entreprise à Bazas"
+            fill
+            className="object-cover"
+          />
+        </div>
+      </div>
+
+      {/* Services */}
       <div className="container mx-auto px-6">
-        <h1 className="text-3xl font-bold text-center mb-8">
-          Prestations entreprises
-        </h1>
-        <p className="text-center max-w-2xl mx-auto mb-12 text-lg">
-          L’association <strong>A R M</strong> propose aux entreprises des
-          prestations sur mesure pour le bien-être de vos équipes dans le
-          Bazadais.
-        </p>
         <div className="grid gap-8 sm:grid-cols-2">
           {services.map((service) => (
             <ServiceCard key={service.title} {...service} />
           ))}
         </div>
+      </div>
+
+      {/* Bouton Contact en bas */}
+      <div className="container mx-auto px-6 mt-12 text-center">
+        <a
+          href="/contact"
+          className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-primary text-white shadow hover:bg-primary/90 transition"
+        >
+          <Sparkles size={18} /> Nous contacter
+        </a>
       </div>
     </section>
   );
