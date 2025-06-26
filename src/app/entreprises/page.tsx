@@ -31,6 +31,17 @@ const marketingItems = [
   },
 ];
 
+type ServiceCardProps = {
+  title: string;
+  duration?: string;
+  participants?: string;
+  location?: string;
+  description: string;
+  practicalInfo?: string[];
+  price: string;
+  extraPricing?: string;
+};
+
 function ServiceCard({
   title,
   duration,
@@ -40,7 +51,7 @@ function ServiceCard({
   practicalInfo,
   price,
   extraPricing,
-}) {
+}: Readonly<ServiceCardProps>) {
   return (
     <div className="bg-white border border-gray-300 rounded-xl p-6 shadow-sm hover:shadow-md transition cursor-default flex flex-col justify-between">
       <h3 className="text-primary font-semibold text-xl mb-4">{title}</h3>
@@ -71,8 +82,8 @@ function ServiceCard({
       {/* Infos pratiques sous forme de liste à puces */}
       {practicalInfo && practicalInfo.length > 0 && (
         <ul className="mb-6 text-gray-700 text-sm list-none space-y-1">
-          {practicalInfo.map((info, i) => (
-            <li key={i} className="flex items-center gap-2">
+          {practicalInfo.map((info) => (
+            <li key={info} className="flex items-center gap-2">
               <Check size={16} className="text-primary flex-shrink-0" />
               <span>{info}</span>
             </li>
