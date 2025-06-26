@@ -5,13 +5,13 @@ export default function HomePage() {
   return (
     <>
       <Hero
-        title="A R M Bazas"
+        title="ARM Bazas"
         subtitle1="Ateliers d'initiation au massage relaxant"
         subtitle2="Bien-être pour entreprises & particuliers"
       />
       <section className="py-16 text-justify bg-white">
         <p className="mb-8 text-lg max-w-2xl mx-auto px-4 text-dark">
-          <strong>A R M</strong> signifie{" "}
+          <strong>ARM</strong> signifie{" "}
           <strong>Ateliers Relaxation Massage</strong>. Notre association
           propose à ses adhérents des{" "}
           <strong>ateliers d&apos;initiation</strong> au massage relaxant à
