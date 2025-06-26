@@ -3,9 +3,7 @@ import { ReactNode } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-// Définit la base URL en fonction de l'environnement
-const baseURL =
-  process.env.NEXT_PUBLIC_BASE_URL ?? "http://localhost:3000";
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL ?? "http://localhost:3000";
 
 export const metadata = {
   metadataBase: new URL(baseURL),
@@ -13,10 +11,30 @@ export const metadata = {
   description:
     "Ateliers Relaxation Massage à Bazas. Prestations de massage pour entreprises et particuliers.",
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon-96x96.png", type: "image/png", sizes: "96x96" },
+      { url: "/favicon.ico", type: "image/x-icon" },
+    ],
+    apple: "/apple-touch-icon.png",
   },
+
+  manifest: "/site.webmanifest",
   openGraph: {
-    images: ["/images/logo.png"],
+    title: "ARM Bazas - Ateliers Relaxation Massage",
+    description:
+      "Massages bien-être à Bazas pour entreprises et particuliers. Découvrez nos ateliers relaxation et massage sur rdv.",
+    images: [
+      {
+        url: "/images/logo.png",
+        width: 600,
+        height: 600,
+      },
+    ],
+    type: "website",
+    locale: "fr_FR",
+  },
+  alternates: {
+    canonical: baseURL,
   },
 };
 
