@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 export const metadata = {
-  title: 'Particuliers - ARM Bazas',
+  title: 'Particuliers - A R M Bazas',
   description:
     'Massages bien-être à Bazas, réalisés par un masseur indépendant dans une ambiance calme et apaisante.',
 };

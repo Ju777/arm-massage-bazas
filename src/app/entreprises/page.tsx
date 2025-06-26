@@ -1,7 +1,7 @@
 import ServiceCard from "@/components/ServiceCard";
 
 export const metadata = {
-  title: "Entreprises - ARM Bazas",
+  title: "Entreprises - A R M Bazas",
   description:
     "Prestations bien-être sur mesure pour les entreprises (TPE/PME) du Bazadais.",
 };
@@ -41,7 +41,7 @@ export default function EntreprisesPage() {
           Prestations entreprises
         </h1>
         <p className="text-center max-w-2xl mx-auto mb-12 text-lg">
-          L’association <strong>ARM</strong> propose aux entreprises des
+          L’association <strong>A R M</strong> propose aux entreprises des
           prestations sur mesure pour le bien-être de vos équipes dans le
           Bazadais.
         </p>
