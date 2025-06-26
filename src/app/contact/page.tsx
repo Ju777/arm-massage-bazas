@@ -1,7 +1,7 @@
 export const metadata = {
-  title: "Contact - ARM Bazas",
+  title: "Contact - A R M Bazas",
   description:
-    "Contactez l’association ARM pour les entreprises ou le masseur indépendant pour les particuliers. Coordonnées, adresse et plan.",
+    "Contactez l’association A R M pour les entreprises ou le masseur indépendant pour les particuliers. Coordonnées, adresse et plan.",
 };
 
 export default function ContactPage() {
@@ -14,7 +14,7 @@ export default function ContactPage() {
         </p>
         <div className="space-y-4 text-center mb-8">
           <p>
-            <strong>Association ARM</strong> – Ateliers Relaxation Massage
+            <strong>Association A R M</strong> – Ateliers Relaxation Massage
           </p>
 
           <p>

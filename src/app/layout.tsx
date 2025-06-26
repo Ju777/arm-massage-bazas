@@ -9,7 +9,7 @@ const baseURL =
 
 export const metadata = {
   metadataBase: new URL(baseURL),
-  title: "ARM Bazas",
+  title: "A R M Bazas",
   description:
     "Ateliers Relaxation Massage à Bazas. Prestations de massage pour entreprises et particuliers.",
   icons: {

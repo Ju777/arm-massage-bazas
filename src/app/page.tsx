@@ -9,23 +9,28 @@ export default function HomePage() {
         subtitle1="Ateliers d'initiation au massage relaxant"
         subtitle2="Bien-être pour entreprises & particuliers"
       />
-      <section className="py-16 text-center bg-white">
+      <section className="py-16 text-justify bg-white">
         <p className="mb-8 text-lg max-w-2xl mx-auto px-4 text-dark">
-          ARM signifie Ateliers Relaxation Massage. Notre association propose à
-          ses adhérents des ateliers d&apos;initiations au massage relaxant à
-          Bazas, des animations de bien-être pour les TPE/PME du Bazadais et
-          ainsi que des massages relaxants sur mesure dans notre salle
-          bien-être.
+          <strong>A R M</strong> signifie{" "}
+          <strong>Ateliers Relaxation Massage</strong>. Notre association
+          propose à ses adhérents des{" "}
+          <strong>ateliers d&apos;initiation</strong> au massage relaxant à
+          Bazas, des <strong>animations de bien-être pour les TPE/PME</strong>{" "}
+          du Bazadais ainsi que des <strong>massages relaxants</strong> sur
+          mesure dans notre salle bien-être (par un masseur indépendant).
+        </p>
+        <p className="mb-8 text-lg max-w-2xl mx-auto px-4 text-dark">
+          Découvrez-nous !
         </p>
         <div className="flex flex-col md:flex-row justify-center gap-4 mt-8">
           <CTAButton href="/ateliers" variant="secondary" icon="heart">
-            Ateliers
+            Ateliers d&apos;initiation
           </CTAButton>
           <CTAButton href="/entreprises" variant="third" icon="business">
-            Entreprises
+            Bien-Être pour TPE / PME
           </CTAButton>
           <CTAButton href="/massages" variant="primary" icon="user">
-            Massages
+            Massages sur rdv
           </CTAButton>
         </div>
       </section>

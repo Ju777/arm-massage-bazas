@@ -8,19 +8,19 @@ export default function Footer() {
         <Link href="/" className="inline-block">
           <Image
             src="/images/logo.png"
-            alt="ARM Bazas"
+            alt="A R M Bazas"
             width={48}
             height={48}
             className="rounded-full mx-auto mb-2 border-2 border-primary"
           />
         </Link>
         <p className="font-title text-lg text-primary">
-          Association ARM – Ateliers Relaxation Massage
+          A R M – Ateliers Relaxation Massage
         </p>
         <p className="text-sm opacity-70">
-          Bazas &nbsp;•&nbsp; Tous droits réservés © {new Date().getFullYear()}
+          Tous droits réservés © {new Date().getFullYear()}
         </p>
-        <nav className="flex justify-center space-x-6 mt-2">
+        {/* <nav className="flex justify-center space-x-6 mt-2">
           <Link href="/ateliers" className="hover:text-primary transition">
             Ateliers
           </Link>
@@ -33,7 +33,7 @@ export default function Footer() {
           <Link href="/contact" className="hover:text-primary transition">
             Contact
           </Link>
-        </nav>
+        </nav> */}
       </div>
     </footer>
   );
