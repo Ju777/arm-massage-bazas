@@ -12,7 +12,7 @@ export default function Header() {
     { href: "/ateliers", mainLabel: "Ateliers", subLabel: "d’initiation" },
     { href: "/entreprises", mainLabel: "TPE / PME Bazas", subLabel: "animations bien-être" },
     { href: "/massages", mainLabel: "Massages", subLabel: "sur rdv" },
-    { href: "/contact", mainLabel: "Contact", subLabel: "" },
+    { href: "/contact", mainLabel: "Contact", subLabel: "nos coordonnées" },
   ];
 
   return (
@@ -22,12 +22,12 @@ export default function Header() {
         <Link href="/" className="flex items-center space-x-2 hover:opacity-90 transition-opacity">
           <Image
             src="/images/logo.png"
-            alt="A R M Bazas"
+            alt="ARM Bazas"
             width={48}
             height={48}
             className="rounded-full border-2 border-primary"
           />
-          <span className="font-title text-xl text-primary font-bold">A R M Bazas</span>
+          <span className="font-title text-xl text-primary font-bold">ARM Bazas</span>
         </Link>
 
         {/* Bouton mobile */}
