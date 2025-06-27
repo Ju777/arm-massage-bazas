@@ -4,7 +4,7 @@ import { Sparkles, Clock, Users, MapPin, Tag, Check } from "lucide-react";
 export const metadata = {
   title: "Entreprises - ARM Bazas",
   description:
-    "Prestations bien-être sur mesure pour les entreprises (TPE/PME) du Bazadais.",
+    "Animations bien-être et qualité de vie au travail pour les TPE/PME du Bazadais.",
 };
 
 const marketingItems = [
@@ -165,13 +165,14 @@ export default function EntreprisesPage() {
       <div className="container mx-auto px-6 flex flex-col md:flex-row items-center md:items-start gap-8 mb-12">
         <div className="flex-1 text-center md:text-left space-y-4">
           <h1 className="text-3xl font-title text-primary mb-2">
-            Prestations bien-être pour entreprises
+            Animations bien-être pour les TPE / PME du Bazadais
           </h1>
           <p className="text-dark leading-relaxed">
-            L’association ARM propose aux entreprises des prestations sur mesure
-            pour le bien-être de vos équipes dans le Bazadais. Offrez à vos
+            L’association ARM propose aux entreprises des animations pour le
+            bien-être de vos équipes dans le Bazadais. Offrez à vos
             collaborateurs des moments de détente et de cohésion adaptés à vos
-            besoins.
+            besoins. Organisation simple, efficace, qui impacte peu le temps de
+            travail.
           </p>
         </div>
         <div className="relative flex-1 w-full h-64 rounded-xl overflow-hidden shadow-lg border border-secondary">

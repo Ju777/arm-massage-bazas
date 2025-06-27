@@ -55,8 +55,8 @@ export default function ContactPage() {
 
           <div className="flex items-center gap-4 text-gray-800">
             <MapPin size={24} className="text-primary flex-shrink-0" />
-            <address className="not-italic text-lg font-medium">
-              10, Rue/Chemin de la Chênaie, 33430 Bazas
+            <address className="text-primary not-italic text-lg font-medium">
+              10, Rue/Chemin de la Chênaie 33430 Bazas
             </address>
           </div>
         </div>
