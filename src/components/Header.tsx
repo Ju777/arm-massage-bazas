@@ -4,11 +4,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
 import { Menu, X, Sparkles } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [showAnnouncement, setShowAnnouncement] = useState(true);
   const navRef = useRef<HTMLElement>(null);
+  const pathname = usePathname();
 
   const menuItems = [
     { href: "/ateliers", mainLabel: "Ateliers", subLabel: "d’initiation" },
@@ -27,7 +29,6 @@ export default function Header() {
     }
   }, [open]);
 
-  // Gérer la date pour afficher ou non l'annonce
   useEffect(() => {
     const now = new Date();
     const cutoffDate = new Date("2025-11-01");
@@ -70,7 +71,7 @@ export default function Header() {
             </span>
           </Link>
 
-          {/* Bouton mobile */}
+          {/* Mobile button */}
           <button
             className="md:hidden p-2 rounded-full hover:bg-secondary transition transform hover:scale-110"
             onClick={() => setOpen(!open)}
@@ -92,26 +93,38 @@ export default function Header() {
             id="mobile-navigation"
             className={`${
               open ? "flex flex-col space-y-2 mt-4" : "hidden"
-            } md:flex md:flex-row md:items-center md:space-y-0 md:space-x-4 font-sans text-center text-primary text-lg`}
+            } md:flex md:flex-row md:items-center md:space-y-0 font-sans text-center text-primary text-lg`}
           >
-            {menuItems.map((item, index) => (
-              <span key={item.href} className="flex items-center">
-                <Link
-                  href={item.href}
-                  className="block px-2 py-1 rounded-md transition-all duration-300 ease-in-out hover:bg-secondary/10 hover:text-primary hover:scale-[1.02]"
-                >
-                  <span className="block text-base font-semibold leading-tight">
-                    {item.mainLabel}
-                  </span>
-                  <span className="block text-xs font-light leading-tight -mt-1">
-                    {item.subLabel}
-                  </span>
-                </Link>
-                {index < menuItems.length - 1 && (
-                  <Sparkles className="w-4 h-4 text-primary mx-1" />
-                )}
-              </span>
-            ))}
+            <div className="flex md:space-x-6 items-center">
+              {menuItems.map((item, index) => (
+                <div key={item.href} className="flex items-center space-x-6">
+                  <Link
+                    href={item.href}
+                    className={`
+                      block px-2 py-1 rounded-md transition-all duration-300 ease-in-out
+                      hover:bg-secondary/10 hover:text-primary hover:scale-[1.02]
+                      ${
+                        pathname === item.href
+                          ? "bg-beige border-b-2 border-primary text-primary font-semibold shadow-inner"
+                          : ""
+                      }
+                    `}
+                  >
+                    <span className="block text-base font-semibold leading-tight">
+                      {item.mainLabel}
+                    </span>
+                    <span className="block text-xs font-light leading-tight -mt-1">
+                      {item.subLabel}
+                    </span>
+                  </Link>
+
+                  {/* Sparkles sauf sur le dernier item */}
+                  {index < menuItems.length - 1 && (
+                    <Sparkles className="w-4 h-4 text-primary" />
+                  )}
+                </div>
+              ))}
+            </div>
           </nav>
         </div>
       </header>
