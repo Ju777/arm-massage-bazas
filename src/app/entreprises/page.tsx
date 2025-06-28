@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Sparkles, Clock, Users, MapPin, Tag, Check } from "lucide-react";
+import ServiceCard from "@/components/ServiceCard"; // adapte le chemin si besoin
 
 export const metadata = {
   title: "Entreprises - ARM Bazas",
@@ -9,7 +9,7 @@ export const metadata = {
 
 const marketingItems = [
   {
-    title: "Démo gratuite sur demande",
+    title: "Démo gratuite",
     description:
       "Faites connaissance avec nous grâce à une démonstration gratuite de massage assis, sur votre lieu d'activité.",
     highlighted: true,
@@ -17,7 +17,7 @@ const marketingItems = [
   {
     title: "Adapté à vos horaires",
     description:
-      "Prestations adaptées pour qu'elles aient lieu pendant ou en dehors des horaires professionnels.",
+      "Nos prestations sont pensées pour qu'elles aient lieu pendant ou en dehors des horaires professionnels.",
   },
   {
     title: "Sur site ou chez nous",
@@ -27,80 +27,9 @@ const marketingItems = [
   {
     title: "En individuel & en groupe",
     description:
-      "Des prestations adaptées, que ce soit pour une personne ou un groupe.",
+      "Des prestations adaptées à tous les besoins : séances de groupe ou individuelles.",
   },
 ];
-
-type ServiceCardProps = {
-  title: string;
-  duration?: string;
-  participants?: string;
-  location?: string;
-  description: string;
-  practicalInfo?: string[];
-  price: string;
-  extraPricing?: string;
-};
-
-function ServiceCard({
-  title,
-  duration,
-  participants,
-  location,
-  description,
-  practicalInfo,
-  price,
-  extraPricing,
-}: Readonly<ServiceCardProps>) {
-  return (
-    <div className="bg-white border border-gray-300 rounded-xl p-6 shadow-sm hover:shadow-md transition cursor-default flex flex-col justify-between">
-      <h3 className="text-primary font-semibold text-xl mb-4">{title}</h3>
-
-      <div className="flex flex-wrap gap-4 mb-4 text-gray-600 text-sm">
-        {duration && (
-          <div className="flex items-center gap-1">
-            <Clock size={16} />
-            <span>{duration}</span>
-          </div>
-        )}
-        {participants && (
-          <div className="flex items-center gap-1">
-            <Users size={16} />
-            <span>{participants}</span>
-          </div>
-        )}
-        {location && (
-          <div className="flex items-center gap-1">
-            <MapPin size={16} />
-            <span>{location}</span>
-          </div>
-        )}
-      </div>
-
-      <p className="text-gray-800 mb-4 leading-relaxed">{description}</p>
-
-      {/* Infos pratiques sous forme de liste à puces */}
-      {practicalInfo && practicalInfo.length > 0 && (
-        <ul className="mb-6 text-gray-700 text-sm list-none space-y-1">
-          {practicalInfo.map((info) => (
-            <li key={info} className="flex items-center gap-2">
-              <Check size={16} className="text-primary flex-shrink-0" />
-              <span>{info}</span>
-            </li>
-          ))}
-        </ul>
-      )}
-
-      <p className="font-semibold text-primary text-lg flex items-center gap-2">
-        <Tag size={18} />
-        {price}
-      </p>
-      {extraPricing && (
-        <p className="text-sm font-normal text-gray-600 mt-1">{extraPricing}</p>
-      )}
-    </div>
-  );
-}
 
 export default function EntreprisesPage() {
   const services = [
@@ -131,11 +60,11 @@ export default function EntreprisesPage() {
     },
     {
       title: "Pack Bien-Être Personnel",
-      duration: "5 séances d'1h",
+      duration: "5 massages d'1h",
       participants: "5 personnes",
       location: "Dans notre salle à Bazas",
       description:
-        "Une solution flexible pour prendre soin de vos collaborateurs en dehors du cadre professionnel. Les séances sont individuelles et réalisées dans notre salle bien-être de Bazas. Les massages sont personnalisés comme en SPA (corps complet, zones ciblées, etc.), dans un espace calme et chaleureux.",
+        "Un pack de massages prépayés pour prendre soin de vos collaborateurs en dehors du cadre professionnel. Les séances sont individuelles et réalisées dans notre salle bien-être de Bazas. Les massages sont personnalisés comme si vous étiez en SPA (corps complet, zones ciblées, etc.), dans un espace calme et chaleureux.",
       practicalInfo: [
         "À réserver librement, sur créneaux choisis de 11h à 20h du lundi au samedi",
         "Un geste de reconnaissance pour renforcer la motivation et fidéliser vos talents",
@@ -167,7 +96,7 @@ export default function EntreprisesPage() {
           <h1 className="text-3xl font-title text-primary mb-2">
             Animations bien-être pour les TPE / PME du Bazadais
           </h1>
-          <p className="text-dark leading-relaxed">
+          <p className="text-dark leading-relaxed text-justify">
             L’association ARM propose aux entreprises des animations pour le
             bien-être de vos équipes dans le Bazadais. Offrez à vos
             collaborateurs des moments de détente et de cohésion adaptés à vos
@@ -191,7 +120,7 @@ export default function EntreprisesPage() {
           {marketingItems.map(({ title, description, highlighted }) => (
             <div
               key={title}
-              className={`p-6 rounded-xl cursor-default transition-transform hover:scale-[1.03] ${
+              className={`text-center p-6 rounded-xl cursor-default transition-transform hover:scale-[1.03] ${
                 highlighted
                   ? "bg-primary text-white shadow-xl"
                   : "bg-white text-gray-800 border border-gray-300 shadow-sm"
@@ -219,30 +148,16 @@ export default function EntreprisesPage() {
         <hr className="border-gray-300" />
       </div>
 
+      {/* Liste des services */}
       <div className="container mx-auto px-6 mb-16 bg-white rounded-xl p-8 shadow-md border border-gray-300">
         <h2 className="text-2xl font-title text-primary mb-8 text-center">
           Nos prestations
         </h2>
-        <div className="grid gap-8 sm:grid-cols-2">
+        <div className="grid md:grid-cols-2 gap-10">
           {services.map((service) => (
             <ServiceCard key={service.title} {...service} />
           ))}
         </div>
-
-        {/* Mention TVA */}
-        <p className="mt-6 text-center text-xs text-gray-500 italic">
-          TVA non applicable, article 293 B du CGI
-        </p>
-      </div>
-
-      {/* Bouton Contact */}
-      <div className="container mx-auto px-6 mt-12 text-center">
-        <a
-          href="/contact"
-          className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-primary text-white shadow hover:bg-primary/90 transition"
-        >
-          <Sparkles size={18} /> Nous contacter
-        </a>
       </div>
     </section>
   );

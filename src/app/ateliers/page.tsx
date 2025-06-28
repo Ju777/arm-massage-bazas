@@ -16,7 +16,7 @@ export default function AteliersPage() {
           <h1 className="text-3xl font-title text-primary mb-2">
             Ateliers d’initiation au massage relaxant
           </h1>
-          <p className="text-dark leading-relaxed">
+          <p className="text-dark leading-relaxed text-justify">
             L’association ARM propose à ses adhérents des ateliers hebdomadaires
             d’initiation au massage relaxant dans une ambiance bienveillante et
             conviviale. Apprenez des gestes simples aux côtés d’un praticien
