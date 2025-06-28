@@ -108,7 +108,7 @@ export default function ParticuliersPage() {
           Après sa formation, il a pratiqué en Inde du Sud lors d&apos;un séjour
           de 3 ans à Pondichéry (2011–2014), avant d’enrichir son expérience
           dans différents contextes en France : EHPAD en Gironde, instituts de
-          beauté, ainsi qu’au SPA des Sources de Caudalie à Martillac.
+          beauté, ainsi qu’au SPA <em>Les Sources de Caudalie</em> à Martillac (33).
         </p>
         <p className="leading-relaxed">
           Son expertise et sa bienveillance vous assurent une séance adaptée à
