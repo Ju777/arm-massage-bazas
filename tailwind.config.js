@@ -14,6 +14,9 @@ export const theme = {
       sans: ["Lato", ..._fontFamily.sans],
       title: ["Quicksand", ..._fontFamily.sans],
     },
+    animation: {
+      "spin-slow": "spin 4s linear infinite",
+    },
   },
 };
 export const plugins = [];

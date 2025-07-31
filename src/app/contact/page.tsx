@@ -18,7 +18,7 @@ export default function ContactPage() {
         </p>
 
         <div className="bg-beige p-10 rounded-xl shadow-md mb-16 border border-gray-200">
-          <h2 className="text-3xl font-semibold mb-8 text-primary">
+          <h2 className="text-3xl font-semibold mb-8 text-primary text-center">
             Coordonnées
           </h2>
           <p className="mb-6 font-semibold text-lg">ARM</p>
@@ -53,12 +53,16 @@ export default function ContactPage() {
             </a>
           </div>
 
-          <div className="flex items-center gap-4 text-gray-800">
+          <div className="flex items-center gap-4 mb-6 text-gray-800">
             <MapPin size={24} className="text-primary flex-shrink-0" />
             <address className="text-primary not-italic text-lg font-medium">
               10, Rue/Chemin de la Chênaie 33430 Bazas
             </address>
           </div>
+
+          <p className="italic text-sm text-gray-600 mt-4">
+            Paiement uniquement par chèque ou espèces.
+          </p>
         </div>
 
         <div className="overflow-hidden rounded-xl shadow-lg aspect-[16/9] border border-gray-300">
