@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Sparkles } from "lucide-react";
 import ServiceCard from "@/components/ServiceCard";
 
 export const metadata = {
@@ -159,6 +160,16 @@ export default function EntreprisesPage() {
           {services.map((service) => (
             <ServiceCard key={service.title} {...service} />
           ))}
+        </div>
+
+        {/* Bouton unique Infos & RDV */}
+        <div className="text-center mt-12">
+          <a
+            href="/contact"
+            className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-primary text-white shadow hover:bg-primary/90 transition"
+          >
+            <Sparkles size={18} /> Infos & devis
+          </a>
         </div>
       </section>
     </section>

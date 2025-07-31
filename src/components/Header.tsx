@@ -16,7 +16,7 @@ export default function Header() {
     { href: "/ateliers", mainLabel: "Ateliers", subLabel: "d’initiation" },
     {
       href: "/entreprises",
-      mainLabel: "TPE / PME Bazas",
+      mainLabel: "TPE/PME du bazadais",
       subLabel: "animations bien-être",
     },
     { href: "/soins-corps", mainLabel: "Soins corps", subLabel: "sur rdv" },
