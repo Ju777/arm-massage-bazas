@@ -69,7 +69,7 @@ export default function ParticuliersPage() {
         </p>
 
         <p className="italic text-sm text-dark/70 mb-6 text-center">
-          Paiement uniquement par chèque ou espèces.
+          Paiement uniquement par chèque ou espèces, pas de cartes bancaires.
         </p>
 
         {/* Bouton unique Infos & RDV */}
@@ -90,7 +90,7 @@ export default function ParticuliersPage() {
           Votre masseur est{" "}
           <em>
             praticien en techniques éducatives et corporelles par le toucher
-          </em>
+          </em>{" "}
           , formé sur un cursus de 800 heures entre 2008 et 2010.
         </p>
         <p className="leading-relaxed mb-2">

@@ -6,6 +6,7 @@ type CTAButtonProps = {
   children: React.ReactNode;
   variant?: "primary" | "secondary" | "third";
   icon?: "business" | "user" | "heart";
+  className?: string; // ajout pour styles externes
 };
 
 export default function CTAButton({
@@ -13,9 +14,10 @@ export default function CTAButton({
   children,
   variant = "primary",
   icon,
+  className = "",
 }: Readonly<CTAButtonProps>) {
   const baseStyles =
-    "inline-flex items-center gap-2 px-6 py-3 rounded-full font-title font-medium transition transform hover:scale-105 shadow-sm";
+    "inline-flex items-center gap-2 px-6 py-3 rounded-full font-title font-medium transition-transform transform hover:scale-105 shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2";
   const variants = {
     primary: "bg-primary text-white hover:bg-primary/90",
     secondary: "bg-secondary text-primary hover:bg-secondary/80",
@@ -23,10 +25,10 @@ export default function CTAButton({
   };
 
   return (
-    <Link href={href} className={`${baseStyles} ${variants[variant]}`}>
-      {icon === "business" && <Briefcase size={18} />}
-      {icon === "user" && <User size={18} />}
-      {icon === "heart" && <Heart size={18} />}
+    <Link href={href} className={`${baseStyles} ${variants[variant]} ${className}`}>
+      {icon === "business" && <Briefcase size={18} aria-hidden="true" />}
+      {icon === "user" && <User size={18} aria-hidden="true" />}
+      {icon === "heart" && <Heart size={18} aria-hidden="true" />}
       {children}
     </Link>
   );
