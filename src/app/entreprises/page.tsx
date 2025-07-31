@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ServiceCard from "@/components/ServiceCard"; // adapte le chemin si besoin
+import ServiceCard from "@/components/ServiceCard";
 
 export const metadata = {
   title: "Entreprises - ARM Bazas",
@@ -91,12 +91,12 @@ export default function EntreprisesPage() {
   return (
     <section className="py-16 bg-light">
       {/* En-tête + image */}
-      <div className="container mx-auto px-6 flex flex-col md:flex-row items-center md:items-start gap-8 mb-12">
+      <header className="container mx-auto px-6 flex flex-col md:flex-row items-center md:items-start gap-8 mb-12">
         <div className="flex-1 text-center md:text-left space-y-4">
-          <h1 className="text-3xl font-title text-primary mb-2">
+          <h1 className="text-3xl font-title text-primary mb-2 leading-tight">
             Animations bien-être pour les TPE / PME du Bazadais
           </h1>
-          <p className="text-dark leading-relaxed text-justify">
+          <p className="text-dark leading-relaxed text-justify max-w-3xl mx-auto md:mx-0">
             L’association ARM propose aux entreprises des animations pour le
             bien-être de vos équipes dans le Bazadais. Offrez à vos
             collaborateurs des moments de détente et de cohésion adaptés à vos
@@ -104,23 +104,24 @@ export default function EntreprisesPage() {
             travail.
           </p>
         </div>
-        <div className="relative flex-1 w-full h-64 rounded-xl overflow-hidden shadow-lg border border-secondary">
+        <div className="relative flex-1 w-full max-w-md h-64 rounded-xl overflow-hidden shadow-lg border border-secondary">
           <Image
             src="/images/amma.jpeg"
             alt="Bien-être en entreprise à Bazas"
             fill
             className="object-cover"
+            priority
           />
         </div>
-      </div>
+      </header>
 
       {/* Section Marketing */}
       <div className="container mx-auto px-6 mb-16 bg-gray-50 rounded-xl p-8 shadow-md border border-gray-200">
         <div className="grid gap-6 sm:grid-cols-4">
           {marketingItems.map(({ title, description, highlighted }) => (
-            <div
+            <section
               key={title}
-              className={`text-center p-6 rounded-xl cursor-default transition-transform hover:scale-[1.03] ${
+              className={`text-center p-6 rounded-xl cursor-default transition-transform duration-300 hover:scale-[1.03] ${
                 highlighted
                   ? "bg-primary text-white shadow-xl"
                   : "bg-white text-gray-800 border border-gray-300 shadow-sm"
@@ -138,18 +139,19 @@ export default function EntreprisesPage() {
               >
                 {description}
               </p>
-            </div>
+            </section>
           ))}
         </div>
       </div>
 
       {/* Ligne de séparation */}
-      <div className="container mx-auto px-6 mb-12">
-        <hr className="border-gray-300" />
-      </div>
+      <hr className="border-gray-300 mx-6 mb-12" />
 
       {/* Liste des services */}
-      <div className="container mx-auto px-6 mb-16 bg-white rounded-xl p-8 shadow-md border border-gray-300">
+      <section
+        aria-label="Liste des animations bien-être"
+        className="container mx-auto px-6 mb-16 bg-white rounded-xl p-8 shadow-md border border-gray-300"
+      >
         <h2 className="text-2xl font-title text-primary mb-8 text-center">
           Nos animations bien-être
         </h2>
@@ -158,7 +160,7 @@ export default function EntreprisesPage() {
             <ServiceCard key={service.title} {...service} />
           ))}
         </div>
-      </div>
+      </section>
     </section>
   );
 }
