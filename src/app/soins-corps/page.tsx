@@ -14,7 +14,7 @@ export default function ParticuliersPage() {
       <div className="container mx-auto px-6 flex flex-col md:flex-row items-center md:items-start gap-8 mb-12">
         <div className="flex-1 text-center md:text-left space-y-4">
           <h1 className="text-3xl font-title text-primary mb-2">
-            Massages sur rdv
+            Soins corps sur rdv
           </h1>
           <p className="text-dark leading-relaxed text-justify">
             Venez vous détendre dans une ambiance calme et apaisante à Bazas.
@@ -24,7 +24,7 @@ export default function ParticuliersPage() {
         <div className="relative flex-1 w-full h-64 rounded-xl overflow-hidden shadow-lg border border-secondary">
           <Image
             src="/images/hero.jpg"
-            alt="Salle de massage à Bazas"
+            alt="Salle de bien-être à Bazas"
             fill
             className="object-cover"
           />

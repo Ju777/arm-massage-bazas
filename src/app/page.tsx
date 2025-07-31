@@ -14,7 +14,7 @@ export default function HomePage() {
           <p className="mb-6 text-lg">
             <strong>ARM</strong> signifie{" "}
             <strong>Ateliers Relaxation Massage</strong>. Notre association loi
-            1901 propose aux habitants du Bazadais des prestations de bien-être
+            1901 propose aux habitants et professionnels du Bazadais des prestations de bien-être
             accessibles, collectives ou individuelles :
           </p>
 
@@ -54,13 +54,13 @@ export default function HomePage() {
 
         <div className="flex flex-col md:flex-row justify-center gap-4 mt-8">
           <CTAButton href="/ateliers" variant="secondary" icon="heart">
-            Ateliers
+            Ateliers d'initiation
           </CTAButton>
           <CTAButton href="/entreprises" variant="third" icon="business">
             TPE / PME Bazas
           </CTAButton>
-          <CTAButton href="/massages" variant="primary" icon="user">
-            Massages
+          <CTAButton href="/soins-corps" variant="primary" icon="user">
+            Soins corps
           </CTAButton>
         </div>
       </section>
