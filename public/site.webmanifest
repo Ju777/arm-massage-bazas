@@ -1,7 +1,7 @@
 {
   "name": "ARM Bazas",
   "short_name": "ARM Bazas",
-  "description": "Ateliers Relaxation Massage à Bazas. Prestations de massage pour entreprises et particuliers.",
+  "description": "Ateliers Relaxation Massage à Bazas. Prestations de bien-être pour entreprises et particuliers.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#f9f5f0",

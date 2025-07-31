@@ -19,7 +19,7 @@ export default function Header() {
       mainLabel: "TPE / PME Bazas",
       subLabel: "animations bien-être",
     },
-    { href: "/massages", mainLabel: "Massages", subLabel: "sur rdv" },
+    { href: "/soins-corps", mainLabel: "Soins corps", subLabel: "sur rdv" },
     { href: "/contact", mainLabel: "Contact", subLabel: "nos coordonnées" },
   ];
 

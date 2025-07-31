@@ -27,7 +27,7 @@ export default function Footer() {
           <Link href="/entreprises" className="hover:text-primary transition">
             Entreprises
           </Link>
-          <Link href="/massages" className="hover:text-primary transition">
+          <Link href="/soins-corps" className="hover:text-primary transition">
             Massages
           </Link>
           <Link href="/contact" className="hover:text-primary transition">

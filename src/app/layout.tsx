@@ -9,7 +9,7 @@ export const metadata = {
   metadataBase: new URL(baseURL),
   title: "ARM Bazas",
   description:
-    "Ateliers Relaxation Massage à Bazas. Prestations de massage pour entreprises et particuliers.",
+    "Ateliers Relaxation Massage à Bazas. Prestations de bien-être pour entreprises et particuliers.",
   keywords: [
     "massage Bazas",
     "ateliers relaxation Bazas",
@@ -26,6 +26,8 @@ export const metadata = {
     "prestation massage entreprise",
     "massage anti-stress",
     "massages thérapeutiques",
+    "soins corps",
+    "gommage",
   ],
   icons: {
     icon: [
@@ -38,7 +40,7 @@ export const metadata = {
   openGraph: {
     title: "ARM Bazas - Ateliers Relaxation Massage",
     description:
-      "Massages bien-être à Bazas pour entreprises et particuliers. Découvrez nos ateliers relaxation et massage sur rdv.",
+      "Massages bien-être à Bazas pour entreprises et particuliers. Découvrez nos ateliers et nos soins corps sur rdv.",
     images: [
       {
         url: "/images/logo.png",
