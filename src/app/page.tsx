@@ -54,7 +54,7 @@ export default function HomePage() {
 
         <div className="flex flex-col md:flex-row justify-center gap-4 mt-8">
           <CTAButton href="/ateliers" variant="secondary" icon="heart">
-            Ateliers d'initiation
+            Ateliers d&apos;initiation
           </CTAButton>
           <CTAButton href="/entreprises" variant="third" icon="business">
             TPE / PME Bazas
