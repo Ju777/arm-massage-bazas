@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { Sparkles } from "lucide-react";
+import { Sparkles, Hand, Footprints, Zap, Droplet } from "lucide-react";
+import { PrestationCard } from "../../components/PrestationCard";
 
 export const metadata = {
   title: "Particuliers - ARM Bazas",
@@ -18,7 +19,8 @@ export default function ParticuliersPage() {
           </h1>
           <p className="text-dark leading-relaxed text-justify">
             Venez vous détendre dans une ambiance calme et apaisante à Bazas.
-            Des massages sur mesure pour votre bien-être et votre relaxation.
+            Des massages adaptés à tous pour votre bien-être et votre
+            relaxation.
           </p>
         </div>
         <div className="relative flex-1 w-full h-64 rounded-xl overflow-hidden shadow-lg border border-secondary">
@@ -31,65 +33,52 @@ export default function ParticuliersPage() {
         </div>
       </div>
 
-      {/* Infos pratiques */}
-      <div className="container mx-auto px-6 bg-beige rounded-xl shadow p-6 grid md:grid-cols-2 gap-6 text-dark mb-12 border border-secondary">
-        <div>
-          <div className="grid gap-4 mb-6">
-            <div className="p-4 border border-secondary rounded-lg bg-white shadow-sm">
-              <h3 className="font-bold text-primary mb-1">
-                Massage personnalisé 1h
-              </h3>
-              <p className="text-sm text-dark">
-                Détente, sportif, ou selon votre demande.
-              </p>
-            </div>
-            <div className="p-4 border border-secondary rounded-lg bg-white shadow-sm">
-              <h3 className="font-bold text-primary mb-1">
-                Réflexologie plantaire 1h
-              </h3>
-              <p className="text-sm text-dark">
-                Massage appuyé de la voûte plantaire pour un effet détente et
-                détox.
-              </p>
-            </div>
-            <div className="p-4 border border-secondary rounded-lg bg-white shadow-sm">
-              <h4 className="font-bold text-primary mb-1">
-                Soin énergétique 1h
-              </h4>
-              <p className="text-sm text-dark">
-                Soin énergétique doux et profond qui harmonise le magnétisme du
-                corps pour libérer le stress, stimuler la vitalité naturelle et
-                procurer un bien-être global. La technique employée
-                s&apos;appelle &quot;La Polarité&quot;.
-              </p>
-            </div>
-          </div>
-
-          <p className="italic text-sm text-dark/80 mb-4">
-            Tous nos soins sont à visée de bien-être, de relaxation et de
-            détente. Ils ne remplacent en aucun cas une pratique médicale ou
-            thérapeutique et sont totalement dénués de caractère sexuel.
-          </p>
-
-          <ul className="space-y-2 list-disc list-inside">
-            <li>
-              <strong>Tarif unique :</strong> 50 € / séance
-            </li>
-            <li>Ambiance calme et propice à la détente</li>
-          </ul>
+      {/* Prestations */}
+      <div className="container mx-auto px-6 bg-beige rounded-xl shadow p-6 mb-12 border border-secondary">
+        <div className="grid gap-6 mb-6 grid-cols-1 md:grid-cols-2">
+          <PrestationCard
+            icon={<Hand size={28} />}
+            title="Massage personnalisé – 1h"
+            description="Offrez-vous une parenthèse enchantée à Bazas, où chaque geste se fait doux voyage. Que vous souhaitiez un massage profond pour libérer les tensions ou un toucher léger pour favoriser la détente, chaque séance s’adapte avec soin à vos envies et besoins."
+            price="50 €"
+          />
+          <PrestationCard
+            icon={<Footprints size={28} />}
+            title="Réflexologie plantaire – 1h"
+            description="Laissez vos pieds raconter l’histoire de votre bien-être. Par un toucher précis et appuyé, ce soin stimule naturellement la détoxification de votre corps tout en éveillant une sensation profonde de lâcher-prise et de renouveau."
+            price="50 €"
+          />
+          <PrestationCard
+            icon={<Zap size={28} />}
+            title="Soin énergétique (Polarité) – 1h"
+            description="Plongez dans un univers de douceur magnétique où le corps retrouve son équilibre et sa vitalité. Ce soin harmonise votre énergie, fait recirculer le magnétisme de votre corps et vous invite à une renaissance intérieure, source de sérénité profonde."
+            price="50 €"
+          />
+          <PrestationCard
+            icon={<Droplet size={28} />}
+            title="Gommage + Massage – 1h30"
+            description="Éveillez votre peau à une nouvelle lumière grâce à un gommage délicat du corps, suivi d’un massage enveloppant qui prolonge l’expérience de détente. Une pause précieuse pour vous sentir à la fois léger(e), rayonnant(e) et pleinement apaisé(e)."
+            price="70 €"
+          />
         </div>
 
-        <div>
-          <h2 className="text-xl font-title text-primary mb-2">Prise de rdv</h2>
-          <p className="mb-4 text-dark leading-relaxed">
-            Contactez-nous par téléphone ou par mail pour planifier votre
-            créneau.
-          </p>
+        <p className="italic text-sm text-dark/70 mb-6 text-center">
+          Tous nos soins sont à visée de bien-être, de relaxation et de détente.
+          Ils ne remplacent en aucun cas une pratique médicale ou thérapeutique
+          et sont totalement dénués de caractère sexuel.
+        </p>
+
+        <p className="italic text-sm text-dark/70 mb-6 text-center">
+          Paiement uniquement par chèque ou espèces.
+        </p>
+
+        {/* Bouton unique Infos & RDV */}
+        <div className="text-center">
           <a
             href="/contact"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-white shadow hover:bg-primary/90 transition"
+            className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-primary text-white shadow hover:bg-primary/90 transition"
           >
-            <Sparkles size={18} /> Nous contacter
+            <Sparkles size={18} /> Infos & RDV
           </a>
         </div>
       </div>
@@ -101,7 +90,7 @@ export default function ParticuliersPage() {
           Votre masseur est{" "}
           <em>
             praticien en techniques éducatives et corporelles par le toucher
-          </em>{" "}
+          </em>
           , formé sur un cursus de 800 heures entre 2008 et 2010.
         </p>
         <p className="leading-relaxed mb-2">
