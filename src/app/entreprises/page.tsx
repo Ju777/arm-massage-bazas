@@ -151,7 +151,7 @@ export default function EntreprisesPage() {
       {/* Liste des services */}
       <div className="container mx-auto px-6 mb-16 bg-white rounded-xl p-8 shadow-md border border-gray-300">
         <h2 className="text-2xl font-title text-primary mb-8 text-center">
-          Nos prestations
+          Nos animations bien-être
         </h2>
         <div className="grid md:grid-cols-2 gap-10">
           {services.map((service) => (
