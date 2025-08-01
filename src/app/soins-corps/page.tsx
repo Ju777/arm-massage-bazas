@@ -50,8 +50,8 @@ export default function ParticuliersPage() {
           />
           <PrestationCard
             icon={<Zap size={28} />}
-            title="Soin énergétique (Polarité) – 1h"
-            description="Plongez dans un univers de douceur magnétique où le corps retrouve son équilibre et sa vitalité. Ce soin harmonise votre énergie, fait recirculer le magnétisme de votre corps et vous invite à une renaissance intérieure, source de sérénité profonde."
+            title="Soin énergétique (appelé Polarité) – 1h"
+            description="Plongez dans un univers de douceur magnétique où le corps retrouve son équilibre et sa vitalité. Ce soin harmonise votre énergie, fait re-circuler le magnétisme de votre corps et vous invite à une renaissance intérieure, source de sérénité profonde."
             price="50 €"
           />
           <PrestationCard
@@ -62,13 +62,11 @@ export default function ParticuliersPage() {
           />
         </div>
 
-        <p className="italic text-sm text-dark/70 mb-6 text-center">
+        <p className="italic text-sm text-dark/70 mb-6 text-center text-black">
           Tous nos soins sont à visée de bien-être, de relaxation et de détente.
           Ils ne remplacent en aucun cas une pratique médicale ou thérapeutique
           et sont totalement dénués de caractère sexuel.
-        </p>
-
-        <p className="italic text-sm text-dark/70 mb-6 text-center">
+          <br />
           Paiement uniquement par chèque ou espèces, pas de cartes bancaires.
         </p>
 
