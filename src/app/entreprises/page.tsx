@@ -37,17 +37,17 @@ export default function EntreprisesPage() {
     {
       title: "Atelier collectif d'automassage",
       duration: "1h",
-      participants: "10 personnes max",
+      participants: "10 personnes et plus*",
       location: "Sur site",
       description:
-        "Atelier d’1h sur site pour apprendre des techniques simples d’auto-massage. Les participants reproduisent des gestes simples à retenir pour gérer stress et fatigue, en tenue confortable.",
+        "Atelier d’1h sur site pour apprendre des techniques de base d’auto-massage. Les participants reproduisent des gestes simples à retenir pour gérer stress et fatigue, en tenue confortable.",
       practicalInfo: ["Se réalise habillé", "Tapis fournis"],
       price: "120 €",
-      extraPricing: "10 € par personne supplémentaire au-delà de 10",
+      extraPricing: "*10 € par personne supplémentaire au-delà de 10",
     },
     {
       title: "Pause Express (Massage assis)",
-      duration: "2h",
+      duration: "2h mini*",
       participants: "6 personnes (20' par personne)",
       location: "Sur site",
       description:
@@ -57,11 +57,11 @@ export default function EntreprisesPage() {
         "Organisation simple, efficace et sans interruption majeure de l’activité.",
       ],
       price: "150 €",
-      extraPricing: "70€ par heure supplémentaire",
+      extraPricing: "*70€ par heure supplémentaire",
     },
     {
       title: "Pack Bien-Être Personnel",
-      duration: "5 massages d'1h",
+      duration: "5 massages d'1h*",
       participants: "5 personnes",
       location: "Dans notre salle à Bazas",
       description:
@@ -71,7 +71,7 @@ export default function EntreprisesPage() {
         "Un geste de reconnaissance pour renforcer la motivation et fidéliser vos talents",
       ],
       price: "275 €",
-      extraPricing: "50€ par massage supplémentaire",
+      extraPricing: "*50€ par massage supplémentaire",
     },
     {
       title: "Atelier Détente & Cohésion",
