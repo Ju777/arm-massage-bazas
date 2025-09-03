@@ -57,7 +57,8 @@ export default function AteliersPage() {
             </li>
             <li>
               <strong>Matériel :</strong> prévoir une serviette de grande taille
-              (de plage), tout le reste est fourni.
+              (de plage) et <strong>de quoi prendre des notes</strong>.
+              Tout le reste est fourni sur place.
             </li>
             <li>
               <strong>Tenue conseillée :</strong> tenue souple (jogging,

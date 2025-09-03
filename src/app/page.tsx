@@ -12,7 +12,7 @@ export default function HomePage() {
 
       <section className="py-16 bg-white text-dark max-w-3xl mx-auto px-6">
         <h2 className="text-3xl font-title text-primary mb-8 text-center">
-          Nos prestations
+          Que fait ARM à Bazas ?
         </h2>
 
         <p className="mb-6 text-lg leading-relaxed text-justify">
@@ -83,7 +83,7 @@ export default function HomePage() {
           <CTAButton
             href="/soins-corps"
             variant="primary"
-            icon="user"
+            icon="hand"
             className="w-full md:w-auto"
           >
             Soins corps

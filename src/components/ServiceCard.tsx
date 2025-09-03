@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Sparkles, Clock, Users, MapPin, Tag, Check } from "lucide-react";
 
 type ServiceCardProps = {
@@ -11,6 +12,8 @@ type ServiceCardProps = {
   practicalInfo?: string[];
   price: string;
   extraPricing?: string;
+  recurrenceOptions?: string[];
+  imageSrc?: string; // nouvelle prop pour illustration
 };
 
 export default function ServiceCard({
@@ -22,24 +25,40 @@ export default function ServiceCard({
   practicalInfo,
   price,
   extraPricing,
+  recurrenceOptions,
+  imageSrc,
 }: Readonly<ServiceCardProps>) {
   return (
     <article
       className="group relative bg-white border border-gray-300 rounded-xl p-6 shadow-md
-             focus:outline-none focus-visible:ring-2 focus-visible:ring-primary
-             hover:bg-light transition cursor-default flex flex-col justify-between"
+                 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary
+                 hover:bg-light transition cursor-default flex flex-col justify-between"
       aria-label={`${title} — durée: ${
         duration ?? "non spécifiée"
       }, participants: ${participants ?? "non spécifiés"}, lieu: ${
         location ?? "non spécifié"
       }`}
     >
+      {/* Illustration */}
+      {imageSrc && (
+        <div className="w-full h-48 mb-4 relative rounded-xl overflow-hidden border border-gray-200 shadow-sm">
+          <Image
+            src={imageSrc}
+            alt={`Illustration de ${title}`}
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+      )}
+
       <Sparkles
         className="absolute top-4 right-4 text-primary opacity-100 transition-colors duration-300 group-hover:text-secondary group-focus-visible:text-secondary"
         size={24}
         aria-hidden="true"
       />
 
+      {/* Titre */}
       <header className="flex items-center gap-2 mb-5">
         <h3 className="relative text-primary font-title font-semibold text-xl mb-4 inline-block">
           {title}
@@ -47,12 +66,13 @@ export default function ServiceCard({
             aria-hidden="true"
             className="block absolute bottom-0 left-0 w-full h-[2px] rounded"
             style={{
-              background: "linear-gradient(to right, #326d6d, #f4efe9)", // primary → beige
+              background: "linear-gradient(to right, #326d6d, #f4efe9)",
             }}
           />
         </h3>
       </header>
 
+      {/* Infos pratiques */}
       <section
         className="flex flex-wrap gap-4 mb-4 text-dark text-sm"
         aria-label="Informations pratiques"
@@ -80,8 +100,10 @@ export default function ServiceCard({
         )}
       </section>
 
+      {/* Description */}
       <p className="text-dark mb-4 leading-relaxed">{description}</p>
 
+      {/* Informations complémentaires */}
       {practicalInfo && practicalInfo.length > 0 && (
         <ul
           className="mb-6 text-dark text-sm list-none space-y-1"
@@ -100,13 +122,33 @@ export default function ServiceCard({
         </ul>
       )}
 
-      <p className="font-semibold text-primary text-lg flex items-center gap-2">
-        <Tag size={18} aria-hidden="true" />
-        {price}
-      </p>
-      {extraPricing && (
-        <p className="text-sm font-normal text-dark mt-1">{extraPricing}</p>
+      {/* Récurrence */}
+      {recurrenceOptions && recurrenceOptions.length > 0 && (
+        <div className="mt-4">
+          <h4 className="text-sm font-semibold text-primary mb-1">
+            Récurrence possible :
+          </h4>
+          <ul
+            className="text-sm text-dark list-disc list-inside space-y-1"
+            aria-label="Options de récurrence"
+          >
+            {recurrenceOptions.map((option) => (
+              <li key={option}>{option}</li>
+            ))}
+          </ul>
+        </div>
       )}
+
+      {/* Prix dans un badge */}
+      <div className="mt-6">
+        <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary font-semibold rounded-full text-lg">
+          <Tag size={18} aria-hidden="true" />
+          {price}
+        </span>
+        {extraPricing && (
+          <p className="text-sm text-dark mt-1">{extraPricing}</p>
+        )}
+      </div>
     </article>
   );
 }
