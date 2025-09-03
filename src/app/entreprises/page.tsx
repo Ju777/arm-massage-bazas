@@ -36,6 +36,7 @@ export default function EntreprisesPage() {
   const services = [
     {
       title: "Atelier collectif d'automassage",
+      imageSrc: "/images/services/automassage.jpg",
       duration: "1h",
       participants: "10 personnes et plus*",
       location: "Sur site",
@@ -44,23 +45,33 @@ export default function EntreprisesPage() {
       practicalInfo: ["Se réalise habillé", "Tapis fournis"],
       price: "120 €",
       extraPricing: "*10 € par personne supplémentaire au-delà de 10",
+      recurrenceOptions: [
+        "Prestation ponctuelle ou mensuelle ou annuelle, etc.",
+        "Sur devis selon vos besoins",
+      ],
     },
     {
       title: "Pause Express (Massage assis)",
+      imageSrc: "/images/services/massage-assis.jpg",
       duration: "2h mini*",
       participants: "6 personnes (20' par personne)",
       location: "Sur site",
       description:
         "Offrez à vos équipes un moment de détente express sur leur lieu de travail. Chaque séance individuelle de 20 minutes cible dos, nuque, épaules et bras pour soulager les tensions rapidement.",
       practicalInfo: [
-        "Se réalise habillé sur chaise érgonomique fournie",
+        "Se réalise habillé sur chaise ergonomique fournie",
         "Organisation simple, efficace et sans interruption majeure de l’activité.",
       ],
       price: "150 €",
       extraPricing: "*70€ par heure supplémentaire",
+      recurrenceOptions: [
+        "Prestation ponctuelle ou mensuelle ou annuelle, etc.",
+        "Sur devis selon vos besoins",
+      ],
     },
     {
       title: "Pack Bien-Être Personnel",
+      imageSrc: "/images/services/pack-bien-etre.jpg",
       duration: "5 massages d'1h*",
       participants: "5 personnes",
       location: "Dans notre salle à Bazas",
@@ -72,9 +83,11 @@ export default function EntreprisesPage() {
       ],
       price: "275 €",
       extraPricing: "*50€ par massage supplémentaire",
+      // pas de récurrence ici
     },
     {
       title: "Atelier Détente & Cohésion",
+      imageSrc: "/images/services/cohesion.jpg",
       duration: "3h",
       participants: "4 personnes max",
       location: "Dans notre salle à Bazas",
@@ -86,6 +99,10 @@ export default function EntreprisesPage() {
       ],
       price: "350 €",
       extraPricing: "",
+      recurrenceOptions: [
+        "Prestation ponctuelle ou mensuelle ou annuelle, etc.",
+        "Sur devis selon vos besoins",
+      ],
     },
   ];
 
