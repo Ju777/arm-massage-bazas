@@ -1,11 +1,11 @@
 import Link from "next/link";
-import { Briefcase, User, Heart } from "lucide-react";
+import { Briefcase, Heart, Hand } from "lucide-react";
 
 type CTAButtonProps = {
   href: string;
   children: React.ReactNode;
   variant?: "primary" | "secondary" | "third";
-  icon?: "business" | "user" | "heart";
+  icon?: "business" | "hand" | "heart";
   className?: string; // ajout pour styles externes
 };
 
@@ -25,9 +25,12 @@ export default function CTAButton({
   };
 
   return (
-    <Link href={href} className={`${baseStyles} ${variants[variant]} ${className}`}>
+    <Link
+      href={href}
+      className={`${baseStyles} ${variants[variant]} ${className}`}
+    >
       {icon === "business" && <Briefcase size={18} aria-hidden="true" />}
-      {icon === "user" && <User size={18} aria-hidden="true" />}
+      {icon === "hand" && <Hand size={18} aria-hidden="true" />}
       {icon === "heart" && <Heart size={18} aria-hidden="true" />}
       {children}
     </Link>
