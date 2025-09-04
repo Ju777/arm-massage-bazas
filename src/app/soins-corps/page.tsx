@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Sparkles, Hand, Footprints, Zap, Droplet } from "lucide-react";
+import { Sparkles } from "lucide-react";
 import { PrestationCard } from "../../components/PrestationCard";
 import Disclaimer from "@/components/Disclaimer";
 import MasseurBio from "@/components/MasseurBio";
@@ -13,7 +13,6 @@ export const metadata = {
 export default function ParticuliersPage() {
   const prestations = [
     {
-      icon: <Hand size={28} />,
       title: "Massage personnalisé – 1h",
       description:
         "Offrez-vous une parenthèse enchantée à Bazas, où chaque geste se fait doux voyage. Que vous souhaitiez un massage profond pour libérer les tensions ou un toucher léger pour favoriser la détente, chaque séance s’adapte avec soin à vos envies et besoins.",
@@ -21,7 +20,6 @@ export default function ParticuliersPage() {
       imageSrc: "/images/massage-table-image.jpg",
     },
     {
-      icon: <Footprints size={28} />,
       title: "Réflexologie plantaire – 1h",
       description:
         "Laissez vos pieds raconter l’histoire de votre bien-être. Par un toucher précis et appuyé, ce soin stimule naturellement la détoxification de votre corps tout en éveillant une sensation profonde de lâcher-prise et de renouveau.",
@@ -29,7 +27,6 @@ export default function ParticuliersPage() {
       imageSrc: "/images/reflexology-image.png",
     },
     {
-      icon: <Zap size={28} />,
       title: "Soin énergétique (appelé Polarité) – 1h",
       description:
         "Plongez dans un univers de douceur magnétique où le corps retrouve son équilibre et sa vitalité. Ce soin harmonise votre énergie, fait re-circuler le magnétisme de votre corps et vous invite à une renaissance intérieure, source de sérénité profonde.",
@@ -37,7 +34,6 @@ export default function ParticuliersPage() {
       imageSrc: "/images/polarity-image.png",
     },
     {
-      icon: <Droplet size={28} />,
       title: "Gommage + Massage – 1h30",
       description:
         "Éveillez votre peau à une nouvelle lumière grâce à un gommage délicat du corps, suivi d’un massage enveloppant qui prolonge l’expérience de détente. Une pause précieuse pour vous sentir à la fois léger(e), rayonnant(e) et pleinement apaisé(e).",
@@ -81,33 +77,6 @@ export default function ParticuliersPage() {
             <PrestationCard key={prestation.title} {...prestation} />
           ))}
         </div>
-
-        {/* <div className="grid gap-6 mb-6 grid-cols-1 md:grid-cols-2">
-          <PrestationCard
-            icon={<Hand size={28} />}
-            title="Massage personnalisé – 1h"
-            description="Offrez-vous une parenthèse enchantée à Bazas, où chaque geste se fait doux voyage. Que vous souhaitiez un massage profond pour libérer les tensions ou un toucher léger pour favoriser la détente, chaque séance s’adapte avec soin à vos envies et besoins."
-            price="50 €"
-          />
-          <PrestationCard
-            icon={<Footprints size={28} />}
-            title="Réflexologie plantaire – 1h"
-            description="Laissez vos pieds raconter l’histoire de votre bien-être. Par un toucher précis et appuyé, ce soin stimule naturellement la détoxification de votre corps tout en éveillant une sensation profonde de lâcher-prise et de renouveau."
-            price="50 €"
-          />
-          <PrestationCard
-            icon={<Zap size={28} />}
-            title="Soin énergétique (appelé Polarité) – 1h"
-            description="Plongez dans un univers de douceur magnétique où le corps retrouve son équilibre et sa vitalité. Ce soin harmonise votre énergie, fait re-circuler le magnétisme de votre corps et vous invite à une renaissance intérieure, source de sérénité profonde."
-            price="50 €"
-          />
-          <PrestationCard
-            icon={<Droplet size={28} />}
-            title="Gommage + Massage – 1h30"
-            description="Éveillez votre peau à une nouvelle lumière grâce à un gommage délicat du corps, suivi d’un massage enveloppant qui prolonge l’expérience de détente. Une pause précieuse pour vous sentir à la fois léger(e), rayonnant(e) et pleinement apaisé(e)."
-            price="70 €"
-          />
-        </div> */}
 
         <Disclaimer />
 

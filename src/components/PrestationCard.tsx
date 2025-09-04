@@ -3,13 +3,11 @@ import React from "react";
 import { Tag } from "lucide-react"; // ✅ Icône Lucide
 
 export function PrestationCard({
-  icon,
   title,
   description,
   price,
   imageSrc,
 }: Readonly<{
-  icon: React.ReactNode;
   title: string;
   description: string;
   price: string;
