@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { Sparkles } from "lucide-react";
 import ServiceCard from "@/components/ServiceCard";
+import Disclaimer from "@/components/Disclaimer";
+import MasseurBio from "@/components/MasseurBio";
 
 export const metadata = {
   title: "Entreprises - ARM Bazas",
@@ -36,7 +38,7 @@ export default function EntreprisesPage() {
   const services = [
     {
       title: "Atelier collectif d'automassage",
-      imageSrc: "/images/services/automassage.jpg",
+      imageSrc: "/images/automassage-image.jpg",
       duration: "1h",
       participants: "10 personnes et plus*",
       location: "Sur site",
@@ -52,7 +54,7 @@ export default function EntreprisesPage() {
     },
     {
       title: "Pause Express (Massage assis)",
-      imageSrc: "/images/services/massage-assis.jpg",
+      imageSrc: "/images/amma-image.jpg",
       duration: "2h mini*",
       participants: "6 personnes (20' par personne)",
       location: "Sur site",
@@ -71,7 +73,7 @@ export default function EntreprisesPage() {
     },
     {
       title: "Pack Bien-Être Personnel",
-      imageSrc: "/images/services/pack-bien-etre.jpg",
+      imageSrc: "/images/massage-table-image.jpg",
       duration: "5 massages d'1h*",
       participants: "5 personnes",
       location: "Dans notre salle à Bazas",
@@ -87,7 +89,7 @@ export default function EntreprisesPage() {
     },
     {
       title: "Atelier Détente & Cohésion",
-      imageSrc: "/images/services/cohesion.jpg",
+      imageSrc: "/images/cohesion-image.jpg",
       duration: "3h",
       participants: "4 personnes max",
       location: "Dans notre salle à Bazas",
@@ -124,7 +126,7 @@ export default function EntreprisesPage() {
         </div>
         <div className="relative flex-1 w-full max-w-md h-64 rounded-xl overflow-hidden shadow-lg border border-secondary">
           <Image
-            src="/images/amma.jpeg"
+            src="/images/amma-picture.jpeg"
             alt="Bien-être en entreprise à Bazas"
             fill
             className="object-cover"
@@ -179,6 +181,8 @@ export default function EntreprisesPage() {
           ))}
         </div>
 
+        <Disclaimer />
+
         {/* Bouton unique Infos & RDV */}
         <div className="text-center mt-12">
           <a
@@ -189,6 +193,9 @@ export default function EntreprisesPage() {
           </a>
         </div>
       </section>
+
+      {/* À propos du masseur */}
+      <MasseurBio />
     </section>
   );
 }

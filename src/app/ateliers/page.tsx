@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Sparkles } from "lucide-react";
+import MasseurBio from "@/components/MasseurBio";
 
 export const metadata = {
   title: "Ateliers - ARM Bazas",
@@ -25,7 +26,7 @@ export default function AteliersPage() {
         </div>
         <div className="relative flex-1 w-full h-64 rounded-xl overflow-hidden shadow-lg border border-secondary">
           <Image
-            src="/images/massage-noir-et-blanc-min.png"
+            src="/images/massage-black-and-white-picture.png"
             alt="Ateliers de massage à Bazas"
             fill
             className="object-cover"
@@ -57,8 +58,8 @@ export default function AteliersPage() {
             </li>
             <li>
               <strong>Matériel :</strong> prévoir une serviette de grande taille
-              (de plage) et <strong>de quoi prendre des notes</strong>.
-              Tout le reste est fourni sur place.
+              (de plage) et <strong>de quoi prendre des notes</strong>. Tout le
+              reste est fourni sur place.
             </li>
             <li>
               <strong>Tenue conseillée :</strong> tenue souple (jogging,
@@ -80,6 +81,9 @@ export default function AteliersPage() {
           </a>
         </div>
       </div>
+
+      {/* À propos du masseur */}
+      <MasseurBio />
     </section>
   );
 }
