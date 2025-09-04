@@ -8,7 +8,7 @@ export default function Hero({
   return (
     <section className="relative h-[60vh] flex items-center justify-center overflow-hidden bg-beige border-b border-secondary">
       <Image
-        src="/images/hero.jpg"
+        src="/images/hero-picture.jpg"
         alt="Massage bien-être"
         fill
         className="object-cover opacity-100"

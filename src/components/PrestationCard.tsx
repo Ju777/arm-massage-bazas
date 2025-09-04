@@ -1,15 +1,17 @@
+import Image from "next/image";
 import React from "react";
+import { Tag } from "lucide-react"; // ✅ Icône Lucide
 
 export function PrestationCard({
-  icon,
   title,
   description,
   price,
+  imageSrc,
 }: Readonly<{
-  icon: React.ReactNode;
   title: string;
   description: string;
   price: string;
+  imageSrc?: string;
 }>) {
   return (
     <article
@@ -21,16 +23,34 @@ export function PrestationCard({
     outline-none"
       aria-label={`${title}, prix ${price}`}
     >
-      <div className="text-primary mb-4 w-fit group-hover:animate-spin-slow">
-        {icon}
-      </div>
+      {/* Image */}
+      {imageSrc && (
+        <div className="w-full h-48 mb-4 relative rounded-xl overflow-hidden border border-gray-200 shadow-sm">
+          <Image
+            src={imageSrc}
+            alt={`Illustration de ${title}`}
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+      )}
 
-      {/* Titre et prix alignés */}
-      <header className="flex justify-between items-baseline mb-3">
+      {/* Titre */}
+      <header className="flex justify-between items-baseline mb-4">
         <h3 className="font-title text-lg font-semibold text-primary">
           {title}
         </h3>
-        <span className="text-base font-semibold text-dark">{price}</span>
+
+        {/* Badge prix avec icône + ombre */}
+        <span
+          className="inline-flex items-center gap-1 px-3 py-1 
+          rounded-full bg-primary/10 text-primary font-semibold text-sm 
+          shadow-md hover:shadow-lg transition-shadow duration-300"
+        >
+          <Tag className="w-4 h-4" aria-hidden="true" />
+          {price}
+        </span>
       </header>
 
       {/* Description */}

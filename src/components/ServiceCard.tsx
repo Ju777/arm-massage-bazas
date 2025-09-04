@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Sparkles, Clock, Users, MapPin, Tag, Check } from "lucide-react";
+import { Clock, Users, MapPin, Tag, Check } from "lucide-react";
 
 type ServiceCardProps = {
   title: string;
@@ -51,12 +51,6 @@ export default function ServiceCard({
           />
         </div>
       )}
-
-      <Sparkles
-        className="absolute top-4 right-4 text-primary opacity-100 transition-colors duration-300 group-hover:text-secondary group-focus-visible:text-secondary"
-        size={24}
-        aria-hidden="true"
-      />
 
       {/* Titre */}
       <header className="flex items-center gap-2 mb-5">
@@ -141,7 +135,7 @@ export default function ServiceCard({
 
       {/* Prix dans un badge */}
       <div className="mt-6">
-        <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary font-semibold rounded-full text-lg">
+        <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary font-semibold rounded-full text-lg shadow-md">
           <Tag size={18} aria-hidden="true" />
           {price}
         </span>
