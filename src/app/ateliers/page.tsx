@@ -42,7 +42,7 @@ export default function AteliersPage() {
           </h2>
           <ul className="space-y-2 list-disc list-inside">
             <li>
-              <strong>Période :</strong> année scolaire (de septembre à juillet)
+              <strong>Période :</strong> du 17/09/2025 au 01/07/2026 
             </li>
             <li>
               <strong>Quand :</strong> tous les mercredis de 18h30 à 20h30
