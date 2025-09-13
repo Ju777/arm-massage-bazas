@@ -16,28 +16,28 @@ export default function ParticuliersPage() {
       title: "Massage personnalisé – 1h",
       description:
         "Offrez-vous une parenthèse enchantée à Bazas, où chaque geste se fait doux voyage. Que vous souhaitiez un massage profond pour libérer les tensions ou un toucher léger pour favoriser la détente, chaque séance s’adapte avec soin à vos envies et besoins.",
-      price: "50 €",
+      price: "40 €",
       imageSrc: "/images/massage-table-image.jpg",
     },
     {
       title: "Réflexologie plantaire – 1h",
       description:
         "Laissez vos pieds raconter l’histoire de votre bien-être. Par un toucher précis et appuyé, ce soin stimule naturellement la détoxification de votre corps tout en éveillant une sensation profonde de lâcher-prise et de renouveau.",
-      price: "50 €",
+      price: "30 €",
       imageSrc: "/images/reflexology-image.png",
     },
     {
       title: "Soin énergétique (appelé Polarité) – 1h",
       description:
         "Plongez dans un univers de douceur magnétique où le corps retrouve son équilibre et sa vitalité. Ce soin harmonise votre énergie, fait re-circuler le magnétisme de votre corps et vous invite à une renaissance intérieure, source de sérénité profonde.",
-      price: "50 €",
+      price: "30 €",
       imageSrc: "/images/polarity-image.png",
     },
     {
       title: "Gommage + Massage – 1h30",
       description:
         "Éveillez votre peau à une nouvelle lumière grâce à un gommage délicat du corps, suivi d’un massage enveloppant qui prolonge l’expérience de détente. Une pause précieuse pour vous sentir à la fois léger(e), rayonnant(e) et pleinement apaisé(e).",
-      price: "70 €",
+      price: "50 €",
       imageSrc: "/images/massage-table-image.jpg",
     },
   ];
