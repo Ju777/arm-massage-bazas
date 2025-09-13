@@ -6,8 +6,8 @@ export default function HomePage() {
     <>
       <Hero
         title="ARM Bazas"
-        subtitle1="Prestations de bien-être pour les particuliers"
-        subtitle2="et les pros du Bazadais"
+        subtitle1="Prestations de bien-être pour particuliers"
+        subtitle2="et pros du Bazadais"
       />
 
       <section className="py-16 bg-white text-dark max-w-3xl mx-auto px-6">
