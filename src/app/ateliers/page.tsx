@@ -45,7 +45,7 @@ export default function AteliersPage() {
               <strong>Période :</strong> du 17/09/2025 au 01/07/2026 
             </li>
             <li>
-              <strong>Quand :</strong> tous les mercredis de 18h30 à 20h30
+              <strong>Quand :</strong> tous les mardis de 18h30 à 20h30
             </li>
             <li>
               <strong>Où :</strong> 10, Chemin de la Chênaie 33430 Bazas
@@ -54,7 +54,7 @@ export default function AteliersPage() {
               <strong>Participants :</strong> 4 personnes max{" "}
             </li>
             <li>
-              <strong>Adhésion annuelle :</strong> 250 € par personne
+              <strong>Adhésion annuelle :</strong> 120 € par personne
             </li>
             <li>
               <strong>Matériel :</strong> prévoir une serviette de grande taille
