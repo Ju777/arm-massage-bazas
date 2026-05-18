@@ -14,12 +14,12 @@ export default function Header() {
 
   const menuItems = [
     { href: "/ateliers", mainLabel: "Ateliers", subLabel: "d’initiation" },
-    {
-      href: "/entreprises",
-      mainLabel: "TPE/PME du bazadais",
-      subLabel: "animations bien-être",
-    },
-    { href: "/soins-corps", mainLabel: "Soins corps", subLabel: "sur rdv" },
+    // {
+    //   href: "/entreprises",
+    //   mainLabel: "TPE/PME du bazadais",
+    //   subLabel: "animations bien-être",
+    // },
+    // { href: "/soins-corps", mainLabel: "Soins corps", subLabel: "sur rdv" },
     { href: "/contact", mainLabel: "Contact", subLabel: "nos coordonnées" },
   ];
 

@@ -3,6 +3,7 @@ import { Sparkles } from "lucide-react";
 import { PrestationCard } from "../../components/PrestationCard";
 import Disclaimer from "@/components/Disclaimer";
 import MasseurBio from "@/components/MasseurBio";
+import { notFound } from "next/navigation";
 
 export const metadata = {
   title: "Particuliers - ARM Bazas",
@@ -11,6 +12,8 @@ export const metadata = {
 };
 
 export default function ParticuliersPage() {
+  notFound();
+
   const prestations = [
     {
       title: "Massage personnalisé – 1h",
