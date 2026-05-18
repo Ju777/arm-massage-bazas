@@ -3,6 +3,7 @@ import { Sparkles } from "lucide-react";
 import ServiceCard from "@/components/ServiceCard";
 import Disclaimer from "@/components/Disclaimer";
 import MasseurBio from "@/components/MasseurBio";
+import { notFound } from "next/navigation";
 
 export const metadata = {
   title: "Entreprises - ARM Bazas",
@@ -35,6 +36,8 @@ const marketingItems = [
 ];
 
 export default function EntreprisesPage() {
+  notFound();
+
   const services = [
     {
       title: "Atelier collectif d'automassage",
